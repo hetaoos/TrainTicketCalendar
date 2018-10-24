@@ -57,7 +57,8 @@ namespace TrainTicketCalendar
     public class ProxySettings
     {
         /// <summary>
-        /// 空，0，1 表示仅谷歌服务使用代理
+        /// 空或0，禁用
+        /// 1， 表示仅谷歌服务使用代理
         /// 2，表示仅12306使用代理
         /// 其他，表示全部使用代理
         /// </summary>

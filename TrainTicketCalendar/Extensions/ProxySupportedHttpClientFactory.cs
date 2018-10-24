@@ -17,15 +17,15 @@ namespace Google.Apis.Http
 
         public static HttpClientHandler GetHttpClientHandler(ProxySettings proxy, bool google)
         {
-            if (string.IsNullOrWhiteSpace(proxy?.address))
-                return null;
-
-            var use = google ? proxy.mode != 2 : proxy.mode != null && proxy.mode != 0 && proxy.mode != 1;
-
             var httpClientHandler = new HttpClientHandler()
             {
                 UseCookies = false,
             };
+
+            if (string.IsNullOrWhiteSpace(proxy?.address) || proxy?.mode == null || proxy.mode == 0)
+                return httpClientHandler;
+
+            var use = google ? proxy.mode != 2 : proxy.mode != null && proxy.mode != 0 && proxy.mode != 1;
 
             if (use == false)
                 return httpClientHandler;
