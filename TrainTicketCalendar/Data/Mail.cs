@@ -111,11 +111,6 @@ namespace TrainTicketCalendar.Data
         public string name { get; set; }
 
         /// <summary>
-        /// 站台
-        /// </summary>
-        public string no { get; set; }
-
-        /// <summary>
         /// 出发或者到达时间
         /// </summary>
         public DateTime time { get; set; }

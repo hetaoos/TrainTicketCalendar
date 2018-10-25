@@ -168,7 +168,7 @@ namespace TrainTicketCalendar.Services
             {
                 Summary = $"{ticket.code} {ticket.from.name}-{ticket.to.name} {ticket.seat}",
                 Location = ticket.from.name,
-                Description = $" {ticket.no} {ticket.name}{peers} {ticket.from?.time:yyyy-MM-dd HH:mm} {ticket.from?.name}-{ticket.to?.name} {ticket.code} {ticket.seat} {ticket.from.no}站台{state}",
+                Description = $" {ticket.no} {ticket.name}{peers} {ticket.from?.time:yyyy-MM-dd HH:mm} {ticket.from?.name}-{ticket.to?.name} {ticket.code} {ticket.seat} {state}",
                 Start = new EventDateTime()
                 {
                     DateTime = ticket.from.time,
