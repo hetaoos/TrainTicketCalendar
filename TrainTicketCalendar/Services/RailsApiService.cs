@@ -176,7 +176,6 @@ namespace TrainTicketCalendar.Services
                 var station = new TrainStation()
                 {
                     station_name = data["station_name"].ToString(), //永州
-                    station_no = data["station_no"].ToString(),//06
                 };
                 string str_stopover_time = data["stopover_time"].ToString();
                 var m = regexStopoverTime.Match(str_stopover_time);

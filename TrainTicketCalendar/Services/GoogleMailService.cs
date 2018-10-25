@@ -152,8 +152,6 @@ namespace TrainTicketCalendar.Services
                     {
                         var start = trainSchedule.stations.FirstOrDefault(o => o.station_name == t.from.name);
                         var end = trainSchedule.stations.FirstOrDefault(o => o.station_name == t.to.name);
-                        t.from.no = start?.station_no;
-                        t.to.no = end?.station_no;
                         t.to.time = (end?.arrive_time ?? end?.start_time) ?? t.from.time.AddHours(1);
                     }
                     log.LogInformation($"id={msg.Id} {t.ToString()}");

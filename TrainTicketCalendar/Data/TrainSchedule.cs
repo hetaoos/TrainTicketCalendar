@@ -97,11 +97,6 @@ namespace TrainTicketCalendar.Data
         public int? stopover_time { get; set; }
 
         /// <summary>
-        /// 站台号
-        /// </summary>
-        public string station_no { get; set; }
-
-        /// <summary>
         ///
         /// </summary>
         /// <returns></returns>
