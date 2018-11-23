@@ -31,6 +31,7 @@ namespace TrainTicketCalendar.Services.TicketParsers
         /// <returns></returns>
         public override List<Ticket> Parse(string html)
         {
+            html = html.Replace("<wbr>", "", true, CultureInfo.CurrentCulture);
             var no = GetTicketNo(html);
             if (string.IsNullOrWhiteSpace(no))
                 return null;
